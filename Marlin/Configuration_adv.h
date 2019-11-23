@@ -277,9 +277,9 @@
  * The fan will turn on automatically whenever any stepper is enabled
  * and turn off after a set period after all steppers are turned off.
  */
-//#define USE_CONTROLLER_FAN
+#define USE_CONTROLLER_FAN
 #if ENABLED(USE_CONTROLLER_FAN)
-  //#define CONTROLLER_FAN_PIN -1           // Set a custom pin for the controller fan
+  #define CONTROLLER_FAN_PIN 7           // Set a custom pin for the controller fan
   #define CONTROLLERFAN_SECS 60             // Duration in seconds for the fan to run after all motors are disabled
   #define CONTROLLERFAN_SPEED 255           // 255 == full speed
   //#define CONTROLLERFAN_SPEED_Z_ONLY 127  // Reduce noise on machines that keep Z enabled
@@ -288,7 +288,7 @@
 // When first starting the main fan, run it at full speed for the
 // given number of milliseconds.  This gets the fan spinning reliably
 // before setting a PWM value. (Does not work with software PWM for fan on Sanguinololu)
-//#define FAN_KICKSTART_TIME 100
+#define FAN_KICKSTART_TIME 100
 
 // Some coolers may require a non-zero "off" state.
 //#define FAN_OFF_PWM  1
@@ -357,7 +357,7 @@
 #define E5_AUTO_FAN_PIN -1
 #define CHAMBER_AUTO_FAN_PIN -1
 
-#define EXTRUDER_AUTO_FAN_TEMPERATURE 50
+#define EXTRUDER_AUTO_FAN_TEMPERATURE 65
 #define EXTRUDER_AUTO_FAN_SPEED 255   // 255 == full speed
 #define CHAMBER_AUTO_FAN_TEMPERATURE 30
 #define CHAMBER_AUTO_FAN_SPEED 255
@@ -1596,7 +1596,7 @@
  *   'M106 P<fan> T2'     : Use the set secondary speed
  *   'M106 P<fan> T1'     : Restore the previous fan speed
  */
-//#define EXTRA_FAN_SPEED
+#define EXTRA_FAN_SPEED
 
 /**
  * Firmware-based and LCD-controlled retract
