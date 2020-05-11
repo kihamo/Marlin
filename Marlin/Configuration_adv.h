@@ -2226,9 +2226,14 @@
    * Override default SPI pins for TMC2130, TMC2160, TMC2660, TMC5130 and TMC5160 drivers here.
    * The default pins can be found in your board's pins file.
    */
-  #define X_CS_PIN          14 // вместо 53 (концевик -Y нижний контакт)
-  #define Y_CS_PIN          15 // вместо 49 (концевик +Y нижний контакт)
-  // Z_CS_PIN = 40 и E0_CS_PIN = 42 и E1_CS_PIN = 44
+  // X_CS_PIN = 53
+  // Y_CS_PIN = 49
+  // Z_CS_PIN = 40
+  // E0_CS_PIN = 42
+  // E1_CS_PIN = 44
+
+  //#define X_CS_PIN          14 // вместо 53 (концевик -Y нижний контакт)
+  //#define Y_CS_PIN          15 // вместо 49 (концевик +Y нижний контакт)
   //#define Z_CS_PIN          -1
   //#define X2_CS_PIN         -1
   //#define Y2_CS_PIN         -1
@@ -3335,7 +3340,7 @@
 //
 // M43 - display pin status, toggle pins, watch pins, watch endstops & toggle LED, test servo probe
 //
-//#define PINS_DEBUGGING
+#define PINS_DEBUGGING
 
 // Enable Marlin dev mode which adds some special commands
 //#define MARLIN_DEV_MODE
